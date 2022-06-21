@@ -1,0 +1,123 @@
+.result {
+  display: flex;
+  flex-wrap: wrap;
+  width: 500px;
+}
+
+.card {
+  width: 200px;
+  margin: 20px;
+}
+
+.card-image {
+  display: block;
+  width: 200px;
+  height: 150px;
+}
+
+.btn {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+  box-shadow: none;
+  cursor: pointer;
+  width: 300px;
+  margin: 5px 10px;
+  padding: 10px 15px;
+  border-radius: 1px;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: white;
+  background: #315efb;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  box-shadow: 0px 2px 8px 2px rgba(141,150,178,.3);
+  transform: scale(1.05);
+}
+
+.form {
+  width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.form__notice {
+  color: #ff3f3f;
+  margin-bottom: 5px;
+}
+
+.label {
+  display: flex;
+  margin-top: 20px;
+  position: relative;
+}
+
+.label__title {
+  width: 135px;
+  margin-right: 33px;
+  font-weight: bold;
+}
+
+.textarea {
+  margin-bottom: 25px;
+  resize: none;
+  box-sizing: border-box;
+  width: 288px;
+  height: 90px;
+}
+
+.label__input,
+.textarea {
+  padding: 9px;
+  border-radius: 5px;
+  border: 2px solid #343435;
+}
+
+.form__submit {
+  font-weight: bold;
+  margin-bottom: 70px;
+  width: 115px;
+  height: 35px;
+  border-radius: 5px;
+  background: #f3f3f3;
+  border: 2px solid #b9b9ba;
+  cursor: pointer;
+}
+
+.label__hint {
+  font-size: 12px;
+  font-weight: bold;
+  position: absolute;
+  left: 405px;
+  padding: 6px;
+  width: 130px;
+  background-color: #d45252;
+  color: white;
+  text-align: center;
+  vertical-align: center;
+  /* opacity: 0; */
+}
+
+.label__hint::before{
+  content: '';
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid #d45252;
+  position: absolute;
+  left: -5px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.label__input:invalid + .label__hint {
+  opacity: 1;
+} 
