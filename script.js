@@ -204,6 +204,13 @@ btn5Node.addEventListener('click', () => {
   }
 })
 
+const page = localStorage.getItem("page");
+const limit = localStorage.getItem("limit");
+
+if(page && limit){
+  sendRequest(page, limit)
+}
+
 function sendRequest(page, limit){
   if(page !== '' && (0 < page < 11) && limit !== '' && (0 < limit < 11)){
     fetch('https://picsum.photos/v2/list?page='+page+'&limit='+limit)
@@ -213,6 +220,8 @@ function sendRequest(page, limit){
     })
     .then((data) => {
       displayResult5(data)
+      localStorage.setItem("page", page)
+      localStorage.setItem("limit", limit)
     })
     .catch(() => { console.log('error') });
   } else {
